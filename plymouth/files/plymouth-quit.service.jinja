@@ -1,0 +1,10 @@
+{%- from "plymouth/map.jinja" import plymouth with context -%}
+
+[Unit]
+Description=Terminate Plymouth Boot Screen
+After={{plymouth.service.start_after|join(' ')}}
+
+[Service]
+ExecStart=-/bin/plymouth quit
+Type=oneshot
+TimeoutSec=20

@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+plymouth:
+  
+  manage_firmwares: True
+
+  config:
+    Daemon:
+      ShowDelay: '0'
+
+  service:
+    start_after:
+      - rc-local.service 
+      - plymouth-start.service 
+      - systemd-user-sessions.service

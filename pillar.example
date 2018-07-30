@@ -1,0 +1,15 @@
+plymouth:
+  
+  manage_firmwares: True
+  
+  config:
+    Daemon:
+      ShowDelay: '0'
+
+  default_theme: my_theme
+
+  themes:
+    my_theme:
+      source: http://site.domain.com/my_theme.tar.gz
+      source_hash: http://site.domain.com/my_theme.tar.gz.md5
+  

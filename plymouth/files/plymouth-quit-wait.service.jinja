@@ -1,0 +1,10 @@
+{%- from "plymouth/map.jinja" import plymouth with context -%}
+
+[Unit]
+Description=Hold until boot process finishes up
+After={{plymouth.service.start_after|join(' ')}}
+
+[Service]
+ExecStart=-/bin/plymouth --wait
+Type=oneshot
+TimeoutSec=0
